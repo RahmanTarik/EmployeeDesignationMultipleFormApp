@@ -36,7 +36,7 @@ namespace EmployeeInformationApp.UI
         {
             DesignationEntryUi designationEntryUi = new DesignationEntryUi();
             designationEntryUi.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void EmployeeInformationUi_Load(object sender, EventArgs e)
@@ -130,6 +130,14 @@ namespace EmployeeInformationApp.UI
             emailTextBox.Clear();
             addressTextBox.Clear();
 
+        }
+
+        private void designationComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            designationComboBox.DataSource = null;
+            designations.Clear();
+            designations = manager.GetAllDesignations();
+            LoadDesignationComboBox(designations);
         }
 
     }

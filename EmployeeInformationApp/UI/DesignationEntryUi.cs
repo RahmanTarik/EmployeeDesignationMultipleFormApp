@@ -29,8 +29,8 @@ namespace EmployeeInformationApp.UI
             {
                 MessageBox.Show(manager.Insert(designation));
                 ClearTextFields();
-                EmployeeInformationUi emUi = new EmployeeInformationUi();
-                emUi.Show();
+                //EmployeeInformationUi emUi = new EmployeeInformationUi();
+                //emUi.Show();
                 this.Hide();
             }
             else

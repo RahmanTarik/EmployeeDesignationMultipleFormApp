@@ -127,7 +127,7 @@
             this.designationComboBox.Name = "designationComboBox";
             this.designationComboBox.Size = new System.Drawing.Size(140, 21);
             this.designationComboBox.TabIndex = 3;
-
+            this.designationComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.designationComboBox_MouseClick);
             // 
             // groupBox1
             // 
