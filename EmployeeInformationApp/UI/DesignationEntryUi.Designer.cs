@@ -100,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(286, 203);
             this.Controls.Add(this.groupBox1);
             this.Name = "DesignationEntryUi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Designation";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
