@@ -67,17 +67,26 @@ namespace EmployeeInformationApp.BLL
             }
         }
 
-        internal string Update(Employee employee)
+        internal string Update(Employee aEmployee)
         {
-            int result = employeeGateway.Update(employee);
-            if (result > 0)
+            Employee employee = GetEmployeeByEmail(aEmployee.Email);
+            if (employee != null)
             {
-                return "Updated Successfully";
+                return "Email Already Exists";
             }
             else
             {
-                return "Failed To Update";
+                int result = employeeGateway.Update(aEmployee);
+                if (result > 0)
+                {
+                    return "Updated Successfully";
+                }
+                else
+                {
+                    return "Failed To Update";
+                }
             }
+           
         }
     }
 }
